@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: com.modelisoft.aggero.featuremodel;singleton:=true
+Bundle-SymbolicName: com.modelisoft.aggero.model;singleton:=true
 Bundle-Version: 0.1.0.qualifier
 Bundle-Activator: com.modelisoft.aggero.featuremodel.internal.Activator$Implementation
 Bundle-Vendor: %providerName
