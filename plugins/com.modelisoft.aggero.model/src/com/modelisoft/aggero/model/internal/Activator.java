@@ -9,7 +9,7 @@
  *
  * </copyright>
  */
-package com.modelisoft.aggero.featuremodel.internal;
+package com.modelisoft.aggero.model.internal;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;

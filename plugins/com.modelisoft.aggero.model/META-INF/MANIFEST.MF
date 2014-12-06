@@ -3,11 +3,22 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: com.modelisoft.aggero.model;singleton:=true
 Bundle-Version: 0.1.0.qualifier
-Bundle-Activator: com.modelisoft.aggero.featuremodel.internal.Activator$Implementation
+Bundle-ClassPath: .
+Bundle-Activator: com.modelisoft.aggero.model.internal.Activator$Implementation
 Bundle-Vendor: %providerName
 Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.common
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: com.modelisoft.aggero.featuremodel.internal;x-internal:=true
+Export-Package: com.modelisoft.aggero.model.common,
+ com.modelisoft.aggero.model.common.impl,
+ com.modelisoft.aggero.model.common.util,
+ com.modelisoft.aggero.model.feature,
+ com.modelisoft.aggero.model.feature.impl,
+ com.modelisoft.aggero.model.feature.util,
+ com.modelisoft.aggero.model.internal;x-internal:=true,
+ com.modelisoft.aggero.model.plugin,
+ com.modelisoft.aggero.model.plugin.impl,
+ com.modelisoft.aggero.model.plugin.util
 Bundle-Localization: plugin

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.modelisoft.aggero.model/src" modelPluginID="com.modelisoft.aggero.model"
+    modelName="Model" modelPluginClass="com.modelisoft.aggero.model.internal.Activator"
+    editPluginClass="com.modelisoft.aggero.model.edit.internal.Activator" editorPluginClass="com.modelisoft.aggero.model.editor.internal.Activator"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>model.ecore</foreignModel>
+  <genPackages prefix="Model" basePackage="com.modelisoft.aggero.model" disposableProviderFactory="true"
+      ecorePackage="model.ecore#/">
+    <nestedGenPackages prefix="Common" basePackage="com.modelisoft.aggero.model" disposableProviderFactory="true"
+        ecorePackage="model.ecore#//common">
+      <genClasses ecoreClass="model.ecore#//common/NamedElement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//common/NamedElement/name"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="model.ecore#//common/Project">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//common/Project/location"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//common/Project/properties"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//common/ProjectProperties">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//common/ProjectProperties/id"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//common/ProjectProperties/version"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//common/ProjectProperties/vendor"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//common/ExecutableProject">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//common/ExecutableProject/executionEnvironment"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//common/Workspace">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//common/Workspace/location"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//common/Workspace/plugins"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//common/Workspace/features"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Plugin" basePackage="com.modelisoft.aggero.model" disposableProviderFactory="true"
+        ecorePackage="model.ecore#//plugin">
+      <genClasses ecoreClass="model.ecore#//plugin/Plugin"/>
+      <genClasses ecoreClass="model.ecore#//plugin/Fragment"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Feature" basePackage="com.modelisoft.aggero.model"
+        disposableProviderFactory="true" ecorePackage="model.ecore#//feature">
+      <genClasses ecoreClass="model.ecore#//feature/Feature">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//feature/Feature/content"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//feature/Feature/dependencies"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//feature/FeatureContent">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//feature/FeatureContent/plugins"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference model.ecore#//feature/FeatureContent/includedFeatures"/>
+      </genClasses>
+      <genClasses ecoreClass="model.ecore#//feature/FeatureDependencies"/>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>
